@@ -1,0 +1,81 @@
+/* 
+    @date: 2025/09/03
+    @code: frontEnd challenge 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+@layer global, theme, modules;
+@layer global {
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: "Josefin Sans", sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--theme3);
+		height: 100%;
+	}
+}
+
+@layer theme {
+	:root {
+		--theme1: #f2f2f2;
+		--theme2: #eae4d5;
+		--theme3: #b6b09f;
+		--theme4: #000;
+		--theme5: #393e46;
+	}
+}
+
+@layer modules {
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 90%;
+		max-width: 320px;
+		background-color: #fff;
+		text-align: center;
+		border-radius: 0.3em;
+		box-shadow: 0 0 6px black;
+	}
+
+	.container .qrcode {
+		width: 80%;
+	}
+	.container .qrcode:hover {
+		cursor: pointer;
+	}
+
+	.intro {
+		width: 80px;
+		height: 80px;
+	}
+
+	.intro .me {
+		width: 100%;
+		border-radius: 50%;
+		shape-outside: circle(50%);
+		-webkit-mask-image: radial-gradient(black 40%, transparent 70%);
+		mask-image: radial-gradient(black 40%, transparent 70%);
+	}
+
+	.container h4 {
+		font-size: 1rem;
+		margin: 5px;
+		color: var(--theme5);
+		padding-inline: 0.8em;
+		font-weight: bold;
+	}
+
+	.container p {
+		padding-inline: 0.8em;
+		padding-bottom: 1em;
+		color: #686d76;
+	}
+}
